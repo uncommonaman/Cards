@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
+
 	<head>
-		<title>Shuffle</title>
-		
+		<title>Cards</title>
+		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-		<style type="text/css">
-			.dragItem {
-			 	margin:20px;
-			 	background-color: #E53935;
-			 	border:2px solid black;
-			 	float:left;
-			 	width:100px;
-			 	height:100px;
-			 	text-align: center;
-			 	cursor: move;
-			};
 
-
-			tr:nth-child(even) {background-color: #f2f2f2};
-
-
-			
-
-
-		</style>
+		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
+
+
 	<body ng-controller="mainController" ng-style="{'background-color':'#212121'}">
+<!-- 	Dragable alphabets generation using open source sortable ui module on github -->
 		<div>
 			<div ui-sortable="sortableOptions" ng-model="alphabets">
 				<div ng-repeat="letter in alphabets" class="dragItem" ng-style="{'font-size':'60px','color': 'black','font-family': 'Roboto'}">
@@ -33,24 +19,26 @@
 				</div> 
 			</div>
 		</div>
-		<div style="margin:20px 5px;clear:both;" ng-style="{'overflow-x':'auto'}">
-			<table ng-if="tableArray.length" ng-style="{'border': '1px solid black','border-collapse': 'collapse','width':'20%','margin':'0px auto'}"  >
-				<thead>
-					<tr >
-						<th ng-style="{'border': '1px solid black','text-align': 'centre','padding': '15px','background-color': '#4CAF50',
-    'color': 'white','font-family': 'Roboto'}">Element</th>
-						<th ng-style="{'border': '1px solid black','padding': '15px','background-color': '#4CAF50',
-    'color': 'white','font-family': 'Roboto'}">Position</th>
-					</tr>
-				</thead>
-				<tbody ng-style="{'background-color':'white'}" >
-					<tr ng-repeat="item in tableArray">
-						<td ng-style="{'border': '1px solid black','text-align': 'center','padding': '15px','font-family': 'Roboto'}">{{item.name}}</td>
-						<td ng-style="{'border': '1px solid black','text-align': 'center','padding': '15px','font-family': 'Roboto'}">{{item.id}}</td>
-					</tr>
+
+
+		<!-- Table creation (hide when new table array is empty) -->
+		
+		<table id="tab" ng-if="tableArray.length">
+			<thead >
+				<tr >
+					<th class="thead">Element</th>
+					<th class="thead">Position</th>
+				</tr>
+			</thead>
+
+			<tbody >
+				<tr ng-repeat="item in tableArray">
+					<td class="tbody">{{item.name}}</td>
+					<td class="tbody">{{item.id}}</td>
+				</tr>
 				</tbody>
-			</table>
-		</div>
+		</table>
+		
 
 		<!-- Script section -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

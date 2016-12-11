@@ -6,7 +6,7 @@ var myApp = angular.module('myApp',['ui.sortable']);
 myApp.controller('mainController',function($scope){
 
 	$scope.alphabets = letters;
-	var startPos = 0;
+	var startPos ;
 	$scope.tableArray = [];
 	$scope.sortableOptions = {
 	    start: function(e,ui) {
@@ -30,7 +30,7 @@ myApp.controller('mainController',function($scope){
 			for(var j=0; j<$scope.alphabets.length; j++){
 	      		var item = $scope.alphabets[j];
 	      		if(item.id != item.fid){
-	      			$scope.tableArray.push(item);
+	      		$scope.tableArray.push(item);
 	      		}
 	      	}
 	    }

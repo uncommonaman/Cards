@@ -1,0 +1,40 @@
+.dragItem {
+			 	margin:20px;
+			 	background-color: #E53935;
+			 	border:2px solid black;
+			 	float:left;
+			 	width:100px;
+			 	height:100px;
+			 	text-align: center;
+			 	cursor: move;
+			}
+
+
+
+#tab{
+				border: 1px solid black;
+				border-collapse: collapse;
+				width:20% ;
+				margin:20px auto;
+			}
+
+.thead{
+				border: 1px solid black;
+				padding: 15px;
+				background-color: #4CAF50;
+   				color: white;
+   				font-family: Roboto;
+
+
+			}
+
+
+.tbody{
+				background-color:white;
+				border: 1px solid black;
+				text-align:center;
+				padding: 15px;
+				font-family: Roboto;
+
+
+			}
