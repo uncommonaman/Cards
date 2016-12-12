@@ -11,6 +11,7 @@ myApp.controller('mainController',function($scope){
 	var startPos ;
 	$scope.tableArray = [];
 	$scope.sortableOptions = {
+		
 
 	    start: function(e,ui) {
 	    	startPos = ui.item.index();

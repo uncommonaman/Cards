@@ -4,7 +4,6 @@ body{
 }
 
 
-
 .dragItem {
 			 	margin:20px;
 			 	background-color: #E53935;
@@ -17,6 +16,21 @@ body{
 			 	font-size:60px;
 			 	color: black;
 			 	font-family: Roboto;
+			 	box-shadow: 3px 3px 5px 3px black;   /* adds blurred shadow */
+			 	
+
+
+			}
+
+
+/*Added border as requested*/
+hr{
+  				clear: left; /* takes care of  floated elements */
+  				padding-top: 20px;
+  				margin-bottom: 20px;
+  				border: none;
+  				border-bottom: 2px solid red;
+
 			}
 
 
@@ -25,7 +39,12 @@ body{
 				border: 1px solid black;
 				border-collapse: collapse;
 				width:20% ;
-				margin:20px auto;
+				clear:left;  /* takes care of  floated elements */
+				float:left;
+				margin: 20px 22px; /*Fixed margin overlap bug by using above two properties*/
+				
+				
+
 			}
 
 .thead{

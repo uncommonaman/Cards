@@ -12,14 +12,15 @@
 
 	<body ng-cloak ng-controller="mainController" >
 <!-- 	Dragable alphabets generation using open source sortable ui module on github -->
-		<div>
+			
 			<div ui-sortable="sortableOptions" ng-model="alphabets">
 				<div ng-repeat="letter in alphabets" class="dragItem" >
 						{{letter.name}}
 				</div> 
 			</div>
-		</div>
-
+			
+		
+			<hr>
 
 		<!-- Table creation (hide when new table array is empty) -->
 		
@@ -38,6 +39,8 @@
 				</tr>
 				</tbody>
 		</table>
+		
+
 		
 
 		<!-- Script section -->
