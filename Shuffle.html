@@ -10,11 +10,11 @@
 	</head>
 
 
-	<body ng-cloak ng-controller="mainController" ng-style="{'background-color':'#212121'}">
+	<body ng-cloak ng-controller="mainController" >
 <!-- 	Dragable alphabets generation using open source sortable ui module on github -->
 		<div>
 			<div ui-sortable="sortableOptions" ng-model="alphabets">
-				<div ng-repeat="letter in alphabets" class="dragItem" ng-style="{'font-size':'60px','color': 'black','font-family': 'Roboto'}">
+				<div ng-repeat="letter in alphabets" class="dragItem" >
 						{{letter.name}}
 				</div> 
 			</div>
