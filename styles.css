@@ -12,7 +12,7 @@ body{
 			 	width:100px;
 			 	height:100px;
 			 	text-align: center;
-			 	cursor: move;
+			 	cursor: pointer; /*change cursor to hand*/
 			 	font-size:60px;
 			 	color: black;
 			 	font-family: Roboto;
